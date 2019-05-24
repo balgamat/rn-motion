@@ -2,7 +2,7 @@
   "name": "react-motion",
   "version": "1.0.0",
   "description": "HOC component wrapping the React.Animated API, allowing for seamless, state-dependent animations.",
-  "main": "index.ts",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/balgamat/react-motion.git"
@@ -29,24 +29,25 @@
   },
   "homepage": "https://github.com/balgamat/react-motion.git#readme",
   "scripts": {
-    "build": ""
+    "build": "rm -rf ./dist/build && tsc",
+    "prepare": "yarn build"
   },
   "peerDependencies": {
+    "react": "^16.8.2",
     "react-native": "https://github.com/the-atelier/react-native#sdk-32"
   },
   "dependencies": {
     "ramda": "^0.26.1",
-    "react": "^16.8.2",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "@types/ramda": "^0.26.5",
+    "@types/react-native": "^0.57.60",
     "@types/styled-components": "^4.1.14",
     "prettier": "^1.17.0",
     "pretty-quick": "^1.10.0",
     "tslint": "^5.12.1",
     "tslint-config-airbnb": "^5.11.1",
-    "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.2.2"
+    "tslint-config-prettier": "^1.18.0"
   }
 }

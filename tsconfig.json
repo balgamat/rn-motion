@@ -7,7 +7,6 @@
     "jsx": "preserve",
     "lib": [
       "es6",
-      "dom"
     ],
     "module": "esnext",
     "moduleResolution": "node",
@@ -26,21 +25,15 @@
     "esModuleInterop": true,
     "strict": false,
     "isolatedModules": true,
-    "noEmit": true
+    "noEmit": true,
+    "typeRoots": [
+      "Motion.types.ts",
+      "node_modules/@types"
+    ],
+    "declaration": false,
+    "removeComments": true,
   },
-  "include": [
-    "./typings/*",
-    "src/**/*"
-  ],
-  "exclude": [
-    "src/**/*.js",
-    "src/**/*.jsx",
-    "node_modules",
-    "build",
-    "scripts",
-    "acceptance-tests",
-    "webpack",
-    "jest",
-    "src/setupTests.ts"
+  "files": [
+    "src/index.ts"
   ]
 }

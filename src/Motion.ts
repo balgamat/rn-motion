@@ -1,26 +1,9 @@
 import React from 'react';
 import { Animated } from 'react-native';
-import { ReactNodeType } from './motionTypes';
+import { MotionProps } from '../index';
 import { values } from 'ramda';
 
-export type MotionValueType = { [key: string]: Animated.Value };
-export type StartParameterType = () => void;
-
-export type Listener = (animatedValue: { value: number }) => void;
-
-type PropsType = {
-  onAnimationEnd?: null | (() => void);
-  animatedValues: any;
-  imperative?: boolean;
-  doNotUseNativeDriver?: boolean;
-  listeners: { [key: string]: Listener };
-  children: (
-    animatedValues: MotionValueType,
-    animation: Animation,
-  ) => ReactNodeType;
-};
-
-class Motion extends React.Component<PropsType> {
+class Motion extends React.Component<MotionProps> {
   static defaultProps = {
     doNotUseNativeDriver: false,
     imperative: false,
@@ -31,7 +14,7 @@ class Motion extends React.Component<PropsType> {
   animatedValues: any = {};
   animation: any;
 
-  constructor(props: PropsType) {
+  constructor(props: MotionProps) {
     super(props);
 
     const {
@@ -73,7 +56,7 @@ class Motion extends React.Component<PropsType> {
     }
   }
 
-  componentWillReceiveProps(nextProps: PropsType) {
+  componentWillReceiveProps(nextProps: MotionProps) {
     const {
       animatedValues,
       onAnimationEnd,
