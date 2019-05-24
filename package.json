@@ -1,8 +1,8 @@
 {
   "name": "react-motion",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "HOC component wrapping the React.Animated API, allowing for seamless, state-dependent animations.",
-  "main": "index.js",
+  "main": "src/index.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/balgamat/react-motion.git"

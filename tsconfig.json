@@ -2,38 +2,39 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "declaration": false,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": false,
     "importHelpers": true,
+    "isolatedModules": true,
     "jsx": "preserve",
     "lib": [
-      "es6",
+      "es6"
     ],
     "module": "esnext",
     "moduleResolution": "node",
+    "noEmit": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "outDir": "build/dist",
+    "removeComments": true,
+    "resolveJsonModule": true,
     "rootDir": "src",
+    "skipLibCheck": false,
     "sourceMap": true,
+    "strict": false,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "target": "es5",
-    "resolveJsonModule": true,
-    "skipLibCheck": false,
-    "esModuleInterop": true,
-    "strict": false,
-    "isolatedModules": true,
-    "noEmit": true,
     "typeRoots": [
       "Motion.types.ts",
       "node_modules/@types"
-    ],
-    "declaration": false,
-    "removeComments": true,
+    ]
   },
   "files": [
-    "src/index.ts"
+    "src/index.ts",
+    "src/Motion.ts"
   ]
 }

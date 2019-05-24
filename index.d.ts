@@ -19,7 +19,7 @@ export type MotionProps = {
   animatedValues: any;
   imperative?: boolean;
   doNotUseNativeDriver?: boolean;
-  listeners: { [key: string]: Listener };
+  listeners?: { [key: string]: Listener };
   children: (
     animatedValues: MotionValueType,
     animation: any,
