@@ -29,11 +29,12 @@
     "suppressImplicitAnyIndexErrors": true,
     "target": "es5",
     "typeRoots": [
-      "Motion.types.ts",
+      "index.d.ts",
       "node_modules/@types"
     ]
   },
   "files": [
+    "index.d.ts",
     "src/index.ts",
     "src/Motion.ts"
   ]

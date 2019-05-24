@@ -1,4 +1,4 @@
-# Animation Package
+# React-Motion
 
 > Declarative animation using React-native's Animated API under the hood.
 

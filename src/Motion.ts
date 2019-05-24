@@ -21,11 +21,13 @@ class Motion extends React.Component<MotionProps> {
       animatedValues,
       onAnimationEnd,
       imperative,
-      listeners,
+      listeners = {},
       doNotUseNativeDriver,
     } = props;
+    // @ts-ignore
     const keys = Object.keys(animatedValues);
-    const animations: any[] = [];
+    // @ts-ignore
+    const animations: Array<any> = [];
     this.animatedValues = keys.reduce((acc: any, key: string) => {
       const {
         method = Animated.spring,
@@ -41,6 +43,7 @@ class Motion extends React.Component<MotionProps> {
         animations.push(
           method(acc[key], {
             toValue,
+            // @ts-ignore
             useNativeDriver: !Boolean(doNotUseNativeDriver || false),
             ...options,
           }),
@@ -63,6 +66,7 @@ class Motion extends React.Component<MotionProps> {
       imperative,
       doNotUseNativeDriver,
     } = nextProps;
+    // @ts-ignore
     const keys = Object.keys(animatedValues);
     const animations = keys.map((key: string) => {
       const {
@@ -85,7 +89,7 @@ class Motion extends React.Component<MotionProps> {
   }
 
   componentWillUnmount() {
-    values(this.animatedValues).forEach(animatedValue =>
+    values(this.animatedValues).forEach((animatedValue: Animated.Value) =>
       animatedValue.removeAllListeners(),
     );
   }
